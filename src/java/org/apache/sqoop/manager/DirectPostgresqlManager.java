@@ -581,6 +581,7 @@ public class DirectPostgresqlManager
   public void exportTable(ExportJobContext context)
     throws IOException, ExportException {
     context.setConnManager(this);
+    LOG.debug("Selecting PostgreSQLCopyExportJob");
     PostgreSQLCopyExportJob job =
       new PostgreSQLCopyExportJob(context,
                                   null,
